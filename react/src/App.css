@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Norwester';
+  src: url('./assets/norwester.otf') format('opentype'),
+       url('./assets/norwester.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves rendering performance */
+}
+

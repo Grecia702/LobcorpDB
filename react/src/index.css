@@ -1,0 +1,144 @@
+:root {
+
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  background: #000000;
+  color: var(--text);
+
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  color: white;
+  font-size: 24px;
+  font-family: 'No';
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Norwester';
+  box-sizing: border-box;
+  
+}
+
+table {
+  --linha-cor: #fc3a3a;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--linha-cor);
+  background-color: #0000009a;
+}
+
+th {
+  font-weight: bold;
+  background-color: #fc3a3a;
+  color: white
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../public/assets/angela_loading.webp');
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  min-height: 100vh;
+  overflow: visible;
+}
+
+html, body {
+  height: auto;
+}
+
+.search {
+  box-sizing: border-box;
+  width: 300px; 
+  height: 40px; 
+  margin-bottom: 18px;
+  font-family: 'Norwester';
+  background-color: #000000;
+  color: #fffea1 ;
+  padding-left: 12px;
+  font-size: 18px;
+  border: 2px solid #fffea1 ;
+}
+
+input:focus {
+  outline: none;
+}
+
+.filter {
+  box-sizing: border-box;
+  all: unset; 
+  cursor: pointer; 
+  background: #000000;
+  border: 2px solid #fffea1 ;
+}
+
+.btn {
+  all: unset;
+  padding-left: 16px;
+  padding-right: 16px;
+  color:  #fffea1; 
+  font-size: 18px;
+  border: 2px solid #fffea1;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.text {
+  color: #fffea1
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+
+}
