@@ -1,0 +1,272 @@
+[
+  {
+    "code": "O-06-20",
+    "portrait": "nothingthere",
+    "name": "Nothing there",
+    "tier": "Aleph",
+    "hp": 2000,
+    "resistances": {
+      "Red": "immune",
+      "White": 0.4,
+      "Black": 0.4,
+      "Pale": 0.8
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+  },
+  {
+    "code": "T-03-46",
+    "portrait": "whitenight",
+    "name": "White night",
+    "tier": "Aleph",
+    "hp": 12000,
+    "resistances": {
+      "Red": 0.5,
+      "White": -2,
+      "Black": 0.5,
+      "Pale": 0.2
+    },
+    "qlipoth": 3,
+    "workDamage": "Pale"
+  },
+  {
+    "code": "O-02-62",
+    "portrait": "judgementbird",
+    "name": "Judgement bird",
+    "tier": "Waw",
+    "hp": 800,
+    "resistances": {
+      "Red": 0.8,
+      "White": 0.8,
+      "Black": 0.8,
+      "Pale": 2
+    },
+    "qlipoth": 3,
+    "workDamage": "Pale"
+  },
+  {
+    "code": "O-01-04",
+    "portrait": "queenofhatred",
+    "name": "The Queen Of Hatred",
+    "tier": "Waw",
+    "hp": 1200,
+    "resistances": {
+      "Red": 0.7,
+      "White": 1.2,
+      "Black": 0.3,
+      "Pale": 1.5
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "O-02-40",
+    "portrait": "bigbird",
+    "name": "Big Bird",
+    "tier": "Waw",
+    "hp": 1600,
+    "resistances": {
+      "Red": 0.8,
+      "White": 1.2,
+      "Black": 0.5,
+      "Pale": 1.5
+    },
+    "qlipoth": 5,
+    "workDamage": "Black"
+  },
+  {
+    "code": "T-04-06",
+    "portrait": "teddybear",
+    "name": "Happy Teddy Bear",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-01-92",
+    "portrait": "todayshylook",
+    "name": "Today's Shy Look",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Black"
+  },
+  {
+    "code": "T-02-43",
+    "portrait": "spiderbud",
+    "name": "Spider Bud",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Red"
+  },
+  {
+    "code": "T-01-31",
+    "portrait": "silentorchestra",
+    "name": "Silent Orchestra",
+    "tier": "Aleph",
+    "hp": 1600,
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-03-93",
+    "portrait": "bluestar",
+    "name": "Blue Star",
+    "tier": "Aleph",
+    "hp": 2200,
+    "resistances": {
+      "Red": 0.4,
+      "White": 0.2,
+      "Black": 0.8,
+      "Pale": 1.2
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-03-03",
+    "portrait": "onesins",
+    "name": "One Sin and Hundreds of Good Deeds",
+    "tier": "Zayin",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-01-57",
+    "portrait": "redhood",
+    "name": "Little Riding Red Hooded Mercenary",
+    "tier": "Waw",
+    "hp": 1000,
+    "resistances": {
+      "Red": 0.9,
+      "White": 0.6,
+      "Black": 0.8,
+      "Pale": 1.2
+    },
+    "qlipoth": 3,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-03-89",
+    "portrait": "censored",
+    "name": "Censored",
+    "tier": "Aleph",
+    "hp": 1500,
+    "resistances": {
+      "Red": 0.6,
+      "White": 0.8,
+      "Black": 0.4,
+      "Pale": 1
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "T-01-54",
+    "portrait": "forsakenmurderer",
+    "name": "Forsaken Murderer",
+    "tier": "Teth",
+    "hp": 270,
+    "resistances": {
+      "Red": 1,
+      "White": 1,
+      "Black": 1.5,
+      "Pale": 2
+    },
+    "qlipoth": 1,
+    "workDamage": "Red"
+  },
+  {
+    "code": "T-04-53",
+    "portrait": "alriune",
+    "name": "Alriune",
+    "tier": "Waw",
+    "hp": 1000,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0,
+      "Black": 0.5,
+      "Pale": 1
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+{
+    "code": "T-05-51",
+    "portrait": "bloodbath",
+    "name": "BloodBath",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": "X",
+    "workDamage": "White"
+  },
+{
+    "code": "F-01-69",
+    "portrait": "derfreischutz",
+    "name": "Der Freischutz",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": "3",
+    "workDamage": "Black"
+  },
+{
+    "code": "O-01-83",
+    "portrait": "knightofdespair",
+    "name": "Knight Of Despair",
+    "tier": "Waw",
+    "hp": "X",
+    "resistances": {
+      "Red": 1.2,
+      "White": 1,
+      "Black": 0.8,
+      "Pale": 0.5
+    },
+    "qlipoth": "X",
+    "workDamage": "White"
+  }
+]

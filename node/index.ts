@@ -3,6 +3,7 @@ import Database  from 'better-sqlite3'
 import cors from 'cors';
 import path  from 'path'
 import type {abno} from './shared/types/types'
+import abnoData from './abno.json'
 
 const app = express()
 const db = new Database('abnoDB.sqlite');
@@ -11,26 +12,14 @@ app.use(cors({
   origin: 'http://localhost:5173', 
 }));
 
-const query = 'INSERT OR IGNORE INTO abnormalities (code, portrait, name, tier, hp, resistances, qlipoth) VALUES (?, ?, ?, ?, ?, ?, ?)'
-const abnos = [
-  ['O-06-20','nothingthere' ,'Nothing there', 'Aleph', 2000,JSON.stringify({Red: 'immune', White: 0.4, Black: 0.4, Pale: 0.8}), 2],
-  ['T-03-46','whitenight','White night', 'Aleph', 12000, JSON.stringify({Red: 0.5, White: -2, Black: 0.5, Pale: 0.2}), 3],
-  ['O-02-62','judgementbird','Judgement bird', 'Waw', 800, JSON.stringify({Red: 0.8, White: 0.8, Black: 0.8, Pale: 2}), 3],
-  ['O-01-04','queenofhatred','The Queen Of Hatred', 'Waw', 1200, JSON.stringify({Red: 0.7, White: 1.2, Black: 0.3, Pale: 1.5}), 2],
-  ['O-02-40','bigbird','Big Bird', 'Waw', 1600, JSON.stringify({Red: 0.8, White: 1.2, Black: 0.5, Pale: 1.5}), 5],
-  ['T-04-06','teddybear','Happy Teddy Bear', 'He', 'X', JSON.stringify({Red: 'Unspecified', White: 'Unspecified', Black: 'Unspecified', Pale: 'Unspecified'}), 0],
-  ['O-01-92','todayshylook',"Today's Shy Look", 'He', 'X', JSON.stringify({Red: 'Unspecified', White: 'Unspecified', Black: 'Unspecified', Pale: 'Unspecified'}), 0],
-  ['T-02-43','spiderbud','Spider Bud', 'Teth', 'X', JSON.stringify({Red: 'Unspecified', White: 'Unspecified', Black: 'Unspecified', Pale: 'Unspecified'}), 0],
-  ['T-01-31','silentorchestra','Silent Orchestra', 'Aleph', 1600, JSON.stringify({Red: 'Unspecified', White: 'Unspecified', Black: 'Unspecified', Pale: 'Unspecified'}), 2],
-  ['F-01-57','redhood','Little Riding Red Hooded Mercenary', 'Waw', 1000, JSON.stringify({Red: 0.9, White: 0.6, Black: 0.8, Pale: 1.2}), 3],
-]
-
-db.exec('CREATE TABLE IF NOT EXISTS abnormalities (id INTEGER PRIMARY KEY, code TEXT, portrait TEXT, name TEXT UNIQUE, tier TEXT, hp INTEGER, resistances TEXT, qlipoth INTEGER)');
+const query = 'INSERT OR IGNORE INTO abnormalities (code, portrait, name, tier, hp, resistances, qlipoth, workDamage) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+db.exec('CREATE TABLE IF NOT EXISTS abnormalities (id INTEGER PRIMARY KEY, code TEXT, portrait TEXT, name TEXT UNIQUE, tier TEXT, hp INTEGER, resistances TEXT, qlipoth INTEGER, workDamage TEXT)');
 
 const stmt = db.prepare(query);
 
-for(const abno of abnos) {
-  stmt.run(abno)
+for(const abno of abnoData) {
+  const arr = [abno.code, abno.portrait, abno.name, abno.tier, abno.hp, JSON.stringify(abno.resistances), abno.qlipoth, abno.workDamage]
+  stmt.run(arr)
 }
 
 app.use("/image", express.static(path.join(__dirname, "imagens"), {
@@ -41,7 +30,7 @@ app.use("/image", express.static(path.join(__dirname, "imagens"), {
 
 let allABnos = db.prepare('SELECT * FROM abnormalities').all()
 let parsedAbnos = allABnos.map(r =>   ({
-  ...r,
+  ...r as abno,
   resistances: JSON.parse(r.resistances)
 }))
 console.log(allABnos)
