@@ -14,4 +14,5 @@ export interface abno {
   hp: number;
   resistances: resist;
   qlipoth: number
+  workDamage: string
 }
