@@ -93,7 +93,7 @@
     "code": "O-01-92",
     "portrait": "todayshylook",
     "name": "Today's Shy Look",
-    "tier": "He",
+    "tier": "Teth",
     "hp": "X",
     "resistances": {
       "Red": "Unspecified",
@@ -161,7 +161,7 @@
       "Black": "Unspecified",
       "Pale": "Unspecified"
     },
-    "qlipoth": 2,
+    "qlipoth": 0,
     "workDamage": "White"
   },
   {
@@ -236,7 +236,7 @@
       "Black": "Unspecified",
       "Pale": "Unspecified"
     },
-    "qlipoth": "X",
+    "qlipoth": 0,
     "workDamage": "White"
   },
 {
@@ -266,7 +266,7 @@
       "Black": 0.8,
       "Pale": 0.5
     },
-    "qlipoth": "X",
+    "qlipoth": 0,
     "workDamage": "White"
   }
 ]
