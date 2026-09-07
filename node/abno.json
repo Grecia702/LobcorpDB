@@ -1,12 +1,12 @@
 [
-  {
+{
     "code": "O-06-20",
     "portrait": "nothingthere",
     "name": "Nothing there",
     "tier": "Aleph",
     "hp": 2000,
     "resistances": {
-      "Red": "immune",
+      "Red": 0,
       "White": 0.4,
       "Black": 0.4,
       "Pale": 0.8
@@ -209,7 +209,7 @@
     "qlipoth": 1,
     "workDamage": "Red"
   },
-  {
+    {
     "code": "T-04-53",
     "portrait": "alriune",
     "name": "Alriune",
@@ -224,7 +224,7 @@
     "qlipoth": 1,
     "workDamage": "White"
   },
-{
+  {
     "code": "T-05-51",
     "portrait": "bloodbath",
     "name": "BloodBath",
@@ -251,7 +251,7 @@
       "Black": "Unspecified",
       "Pale": "Unspecified"
     },
-    "qlipoth": "3",
+    "qlipoth": 3,
     "workDamage": "Black"
   },
 {
@@ -268,5 +268,755 @@
     },
     "qlipoth": 0,
     "workDamage": "White"
+  },
+  {
+    "code": "T-06-27",
+    "portrait": "176mhz",
+    "name": "1.76 MHz",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 5,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-01-69",
+    "portrait": "derfreischutz",
+    "name": "Der Freischutz",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 3,
+    "workDamage": "Black"
+  },
+    {
+    "code": "T-05-41",
+    "portrait": "allaroundhelper",
+    "name": "All Around Helper",
+    "tier": "He",
+    "hp": 300,
+    "resistances": {
+      "Red": 0.5,
+      "White": 1,
+      "Black": 2,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+  },
+{
+    "code": "O-02-63",
+    "portrait": "apocalipsebird",
+    "name": "Apocalipse Bird",
+    "tier": "Aleph",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Black"
+},
+{
+    "code": "D-01-106",
+    "portrait": "armyinblack",
+    "name": "Army in Black",
+    "tier": "Aleph",
+    "hp": 450,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0.6,
+      "Black": 1,
+      "Pale": 0.8
+    },
+    "qlipoth": 3,
+    "workDamage": "White"
+},
+{
+    "code": "F-02-44",
+    "portrait": "beautyandbeast",
+    "name": "Beauty and the Beast",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+},
+    {
+    "code": "F-02-58",
+    "portrait": "bigandwillbebadwolf",
+    "name": "Big and Will be Bad Wolf",
+    "tier": "Waw",
+    "hp": 2000,
+    "resistances": {
+      "Red": 1,
+      "White": 0.7,
+      "Black": 0.7,
+      "Pale": 1
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+    },
+  {
+    "code": "O-01-55",
+    "portrait": "childofgalaxy",
+    "name": "Child of the Galaxy",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 5,
+    "workDamage": "Black"
+  },
+  {
+    "code": "O-04-72",
+    "portrait": "burrowingheaven",
+    "name": "The Burrowing Heaven",
+    "tier": "Waw",
+    "hp": 800,
+    "resistances": {
+      "Red": 0,
+      "White": 1.2,
+      "Black": 0.5,
+      "Pale": 1.5
+    },
+    "qlipoth": 3,
+    "workDamage": "Black"
+  },
+    {
+    "code": "D-01-110",
+    "portrait": "cloudedmonk",
+    "name": "Clouded Monk",
+    "tier": "Waw",
+    "hp": 1200,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0.8,
+      "Black": 0.8,
+      "Pale": 1.5
+    },
+    "qlipoth": 3,
+    "workDamage": "White"
+  },
+    {
+    "code": "O-05-61",
+    "portrait": "crumblingarmor",
+    "name": "Crumbling Armor",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-03-88",
+    "portrait": "dimensionalrefraction",
+    "name": "Dimensional Refraction Variant",
+    "tier": "Waw",
+    "hp": 600,
+    "resistances": {
+      "Red": 0,
+      "White": 1.5,
+      "Black": 0.8,
+      "Pale": 1
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-02-70",
+    "portrait": "blackswan",
+    "name": "Dream of a Black Swan",
+    "tier": "Waw",
+    "hp": 1500,
+    "resistances": {
+      "Red": 1,
+      "White": 0.8,
+      "Black": 1.5,
+      "Pale": 1
+    },
+    "qlipoth": 5,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-04-83",
+    "portrait": "fairyfestival",
+    "name": "Fairy Festival",
+    "tier": "Zayin",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-03-60",
+    "portrait": "fragmentofuniverse",
+    "name": "Fragment of The Universe",
+    "tier": "Teth",
+    "hp": 230,
+    "resistances": {
+      "Red": 1,
+      "White": 1.5,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "D-01-105",
+    "portrait": "elpiantodellaluna",
+    "name": "Il pianto della luna",
+    "tier": "Waw",
+    "hp": 1300,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 3,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-01-67",
+    "portrait": "laetitia",
+    "name": "Laetitia",
+    "tier": "He",
+    "hp": 350,
+    "resistances": {
+      "Red": 0.8,
+      "White": 0.8,
+      "Black": 1.2,
+      "Pale": 1
+    },
+    "qlipoth": 0,
+    "workDamage": "Black"
+  },
+  {
+    "code": "O-04-84",
+    "portrait": "meatlantern",
+    "name": "Meat Lantern",
+    "tier": "Teth",
+    "hp": 330,
+    "resistances": {
+      "Red": 1.5,
+      "White": 0.8,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+  {
+    "code": "D-03-109",
+    "portrait": "meltinglove",
+    "name": "Melting Love",
+    "tier": "Aleph",
+    "hp": 1500,
+    "resistances": {
+      "Red": -1,
+      "White": 1,
+      "Black": 1.5,
+      "Pale": 0.8
+    },
+    "qlipoth": 3,
+    "workDamage": "Black"
+  },
+    {
+    "code": "T-01-75",
+    "portrait": "mountainofsmilingbodies",
+    "name": "Mountain of Smiling Bodies",
+    "tier": "Aleph",
+    "hp": 500,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0.8,
+      "Black": 0.8,
+      "Pale": 0.5
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+    {
+    "code": "D-03-109",
+    "portrait": "meltinglove",
+    "name": "Melting Love",
+    "tier": "Aleph",
+    "hp": 1500,
+    "resistances": {
+      "Red": -1,
+      "White": 1,
+      "Black": 1.5,
+      "Pale": 0.8
+    },
+    "qlipoth": 3,
+    "workDamage": "Black"
+  },
+    {
+    "code": "O-04-100",
+    "portrait": "graveofcherryblossom",
+    "name": "Grave of Cherry Blossoms",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 3,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-01-15",
+    "portrait": "namelessfetus",
+    "name": "Nameless Fetus",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 1,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-01-12",
+    "portrait": "oldlady",
+    "name": "Old Lady",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 4,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-05-52",
+    "portrait": "wellchers",
+    "name": "Opened Can of Wellchers",
+    "tier": "Zayin",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Red"
+  },
+  {
+    "code": "D-04-108",
+    "portrait": "parasitetree",
+    "name": "Parasite Tree",
+    "tier": "Waw",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-01-45",
+    "portrait": "plaguedoctor",
+    "name": "Plague Doctor",
+    "tier": "Zayin",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-02-98",
+    "portrait": "porcubus",
+    "name": "Porccubus",
+    "tier": "He",
+    "hp": 830,
+    "resistances": {
+      "Red": 1,
+      "White": 0.5,
+      "Black": 1,
+      "Pale": 1.5
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "D-02-107",
+    "portrait": "ppoddae",
+    "name": "Ppodae",
+    "tier": "Teth",
+    "hp": 230,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0.8,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-02-56",
+    "portrait": "punishingbird",
+    "name": "Punishing Bird",
+    "tier": "Teth",
+    "hp": 200,
+    "resistances": {
+      "Red": 2,
+      "White": 2,
+      "Black": 2,
+      "Pale": 2
+    },
+    "qlipoth": 4,
+    "workDamage": "Red"
+  },
+  {
+    "code": "T-04-50",
+    "portrait": "queenbee",
+    "name": "Queen Bee",
+    "tier": "Waw",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 1,
+    "workDamage": "Red"
+  },
+  {
+    "code": "F-02-49",
+    "portrait": "rudoltaofsleight",
+    "name": "Rudolta of the Sleigh",
+    "tier": "He",
+    "hp": 450,
+    "resistances": {
+      "Red": 1.5,
+      "White": 0.5,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "F-01-87",
+    "portrait": "scarecrow",
+    "name": "Scarecrow Searching for Wisdom",
+    "tier": "He",
+    "hp": 500,
+    "resistances": {
+      "Red": 0.8,
+      "White": 0.5,
+      "Black": 1.2,
+      "Pale": 2
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-05-76",
+    "portrait": "schadenfreud",
+    "name": "Schadenfreude",
+    "tier": "He",
+    "hp": 800,
+    "resistances": {
+      "Red": 1.2,
+      "White": 0.5,
+      "Black": 1,
+      "Pale": 1.5
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+  },
+  {
+    "code": "F-01-02",
+    "portrait": "scorchedgirl",
+    "name": "Scorched Girl",
+    "tier": "Teth",
+    "hp": 120,
+    "resistances": {
+      "Red": 0.5,
+      "White": 2,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "Red"
+  },
+  {
+    "code": "F-04-42",
+    "portrait": "snowwhiteapple",
+    "name": "Snow White's Apple",
+    "tier": "Waw",
+    "hp": 800,
+    "resistances": {
+      "Red": 0.5,
+      "White": 1,
+      "Black": 0,
+      "Pale": 1.5
+    },
+    "qlipoth": 1,
+    "workDamage": "Black"
+  },
+  {
+    "code": "T-02-71",
+    "portrait": "dreamingcurrent",
+    "name": "The Dreaming Current",
+    "tier": "Waw",
+    "hp": 200,
+    "resistances": {
+      "Red": 1.5,
+      "White": 0.5,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-02-101",
+    "portrait": "firebird",
+    "name": "The Firebird",
+    "tier": "Waw",
+    "hp": 1500,
+    "resistances": {
+      "Red": 0.8,
+      "White": 0.4,
+      "Black": 1.2,
+      "Pale": 2
+    },
+    "qlipoth": 3,
+    "workDamage": "Red"
+  },
+  {
+    "code": "T-01-68",
+    "portrait": "deadbutterflies",
+    "name": "The FUneral of the Dead Butterflies",
+    "tier": "He",
+    "hp": 400,
+    "resistances": {
+      "Red": 0.5,
+      "White": 1.5,
+      "Black": 1,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-01-64",
+    "portrait": "kingofgreed",
+    "name": "The King of Greed",
+    "tier": "Waw",
+    "hp": 1500,
+    "resistances": {
+      "Red": 0,
+      "White": 0.5,
+      "Black": 1.2,
+      "Pale": 1.5
+    },
+    "qlipoth": 1,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-01-73",
+    "portrait": "knightofdespair",
+    "name": "The Knight of Despair",
+    "tier": "Waw",
+    "hp": 800,
+    "resistances": {
+      "Red": 1.2,
+      "White": 1,
+      "Black": 0.8,
+      "Pale": 0.5
+    },
+    "qlipoth": 0,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-04-66",
+    "portrait": "littleprince",
+    "name": "The Little Prince",
+    "tier": "Waw",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "O-02-74",
+    "portrait": "nakednest",
+    "name": "The Naked Nest",
+    "tier": "Waw",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Red"
+  },
+  {
+    "code": "O-04-08",
+    "portrait": "redshoes",
+    "name": "The Red Shoes",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 1,
+    "workDamage": "Red"
+  },
+  {
+    "code": "F-01-37",
+    "portrait": "snowqueen",
+    "name": "The Snow Queen",
+    "tier": "He",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "White"
+  },
+  {
+    "code": "T-02-99",
+    "portrait": "voiddream",
+    "name": "Void Dream",
+    "tier": "Teth",
+    "hp": 250,
+    "resistances": {
+      "Red": 1.5,
+      "White": 0.8,
+      "Black": 1.2,
+      "Pale": 2
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "F-05-32",
+    "portrait": "woodsman",
+    "name": "Warm-heated Woodsman",
+    "tier": "He",
+    "hp": 430,
+    "resistances": {
+      "Red": 1.5,
+      "White": 0.8,
+      "Black": 0.8,
+      "Pale": 1.0
+    },
+    "qlipoth": 1,
+    "workDamage": "White"
+  },
+  {
+    "code": "O-05-102",
+    "portrait": "yin",
+    "name": "Yin",
+    "tier": "Waw",
+    "hp": 800,
+    "resistances": {
+      "Red": 0.5,
+      "White": 1.5,
+      "Black": 0,
+      "Pale": 1
+    },
+    "qlipoth": 2,
+    "workDamage": "Black"
+  },
+  {
+    "code": "F-01-18",
+    "portrait": "ladyfacingthewall",
+    "name": "The Lady Facing The Wall",
+    "tier": "Teth",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 2,
+    "workDamage": "White"
+  },
+  {
+    "code": "Bald-is-awesome",
+    "portrait": "yourebald",
+    "name": "You're Bald...",
+    "tier": "Zayin",
+    "hp": "X",
+    "resistances": {
+      "Red": "Unspecified",
+      "White": "Unspecified",
+      "Black": "Unspecified",
+      "Pale": "Unspecified"
+    },
+    "qlipoth": 0,
+    "workDamage": "Black"
   }
 ]
