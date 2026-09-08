@@ -3,23 +3,26 @@ import { useQuery} from '@tanstack/react-query';
 import './App.css'
 import type { abno } from '../../node/shared/types/types'
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
+import { FilterButton } from './components/FilterButton';
 
 interface Filters  {
   riskLevel: string,
   hp: number,
   workDamage: string,
+  code: string,
   hasQlipoth: boolean | null,
   resistance: string | null | number
 }
 
 function App() {
-  const url = 'http://127.0.0.1:3000'
+  const url = 'http://192.168.100.5:3000'
   const [focusedId, setFocusedId] = useState<number | null>(null)
   const [text, setText] = useState<string>('')
   const [visible, setVisible] = useState(false)
   const [filters, setFilters] = useState<Filters>({
     riskLevel: '',
     workDamage: '',
+    code: '',
     hp: 12000,
     hasQlipoth: null,
     resistance: null,
@@ -34,20 +37,16 @@ function App() {
     },
   });
   
-  const riskLevel = [
-    "Zayin",
-    "Teth",
-    "He",
-    "Waw",
-    "Aleph",
-  ]
+  const riskLevel = ["Zayin","Teth","He", "Waw","Aleph",]
+  const workTypes = ["Red", "White", "Black", "Pale"]
+  const code = ["Original", "Fairy Tale", "Trauma", "Donator"]
 
   if (isLoading) return <p>Carregando...</p>;
   if (isError) return <p>Erro: {error.message}</p>;
 
   const toggleFilter = <K extends keyof Filters>(key: K, value: Filters[K])=> {
     if(filters[key] === value) {
-      setFilters(prev => ({...prev, [key]: []}))
+      setFilters(prev => ({...prev, [key]: ''}))
       return
     }
     setFilters(prev => ({ ...prev, [key]: value}))
@@ -66,6 +65,10 @@ function App() {
       if (!filters.workDamage.includes(a.workDamage)) return false
     }
 
+    if (filters.code !== null && filters.code.length > 0) {
+      if (filters.code[0] !== a.code[0]) return false
+    }
+
     if(typeof a.hp === 'number' && (filters.hp < a.hp)){
       return false
     }
@@ -73,7 +76,6 @@ function App() {
     return true
   })
 
-  const workTypes = ["Red", "White", "Black", "Pale"]
 
   const handleInput = (text: string) => {
     setText(text)
@@ -82,7 +84,7 @@ function App() {
   return (
     <>
       {/* <p style={{color: '#fffea1', fontFamily: 'Norwester', fontWeight: 'bold', marginBottom: '16px'}}>LOBPEDIA</p> */}
-      <div style={{marginBottom: '24px', display: 'flex', flexDirection: 'column'}}>
+      <div style={{marginBottom: '24px', display: 'flex', flexDirection: 'column' }}>
         <input
           className='search'
           placeholder='Search...' 
@@ -91,7 +93,7 @@ function App() {
         </input>
         <div 
           className='filter'
-          style={{display:'flex', flexDirection: 'column', maxWidth: visible ? '650px': '300px'}}
+          style={{ maxWidth: visible ? '650px': '300px'}}
         >
             <button
               className='icon'
@@ -103,20 +105,22 @@ function App() {
             </button>
           { visible  &&
             <div style={{ display:'flex', flexDirection: 'column', borderTop: '2px #fffea1 solid', gap: '16px', padding: '12px'}}>
-              <div style={{ display: 'flex', flexDirection: 'row', gap: '12px'}}>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
                 <p className='text' style={{ alignSelf: 'flex-start', textAlign: 'left'}}>Risk Level: </p>
                 {riskLevel.map(x => 
-                  <button className={filters?.riskLevel === x ? 'btn btn-selected' : 'btn'} onClick={() => toggleFilter('riskLevel', x)}>
-                    {x}
-                  </button>
+                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
                 )}
               </div>
-              <div style={{display: 'flex', flexDirection: 'row', gap: '12px'}}>
-                <p style={{color: '#fffea1'}}>Work Damage: </p>
+              <div style={{display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
+                <p  style={{color: '#fffea1'}}>Work Damage: </p>
                 {workTypes.map(x=> 
-                  <button className={filters?.workDamage === x  ? 'btn btn-selected' : 'btn'} onClick={() => toggleFilter('workDamage', x)}>
-                    {x}
-                  </button>
+                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
+                )}
+              </div>
+              <div style={{display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
+                <p style={{color: '#fffea1'}}>Code: </p>
+                {code.map(x=> 
+                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
                 )}
               </div>
               <div style={{display: 'flex', flexDirection: 'row', gap: '36px'}}>
@@ -124,7 +128,6 @@ function App() {
                 <input type='range' min="0" max="12000" value={filters.hp} onChange={(e) => setFilters(prev => ({ ...prev, hp: Number(e.target.value) }))} className='custom-slider'/>
                 <p>{filters.hp}</p>
               </div>
-
             </div>
           }
         </div>
