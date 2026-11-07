@@ -1,31 +1,36 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useQuery} from '@tanstack/react-query';
 import './App.css'
 import type { abno } from '../../node/shared/types/types'
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import { FilterButton } from './components/FilterButton';
+import { SortButton } from './components/SortButton';
 
 interface Filters  {
-  riskLevel: string,
+  tier: string,
   hp: number,
   workDamage: string,
   code: string,
   hasQlipoth: boolean | null,
   resistance: string | null | number
+  orderBy: string | null
+  sortDirection: 'ASC' | 'DESC' | null
 }
 
 function App() {
-  const url = 'http://192.168.100.5:3000'
+  const url = 'http://192.168.100.27:3000'
   const [focusedId, setFocusedId] = useState<number | null>(null)
   const [text, setText] = useState<string>('')
   const [visible, setVisible] = useState(false)
   const [filters, setFilters] = useState<Filters>({
-    riskLevel: '',
+    tier: '',
     workDamage: '',
     code: '',
     hp: 12000,
     hasQlipoth: null,
     resistance: null,
+    orderBy: null,
+    sortDirection: null
   })
 
   const { data: abnos, isLoading, isError, error } = useQuery({
@@ -37,7 +42,7 @@ function App() {
     },
   });
   
-  const riskLevel = ["Zayin","Teth","He", "Waw","Aleph",]
+  const tier = ["Zayin","Teth","He", "Waw","Aleph",]
   const workTypes = ["Red", "White", "Black", "Pale"]
   const code = ["Original", "Fairy Tale", "Trauma", "Donator"]
 
@@ -52,13 +57,25 @@ function App() {
     setFilters(prev => ({ ...prev, [key]: value}))
   }
 
+  const toggleSort = (orderBy: string)=> {
+    if(filters.orderBy && filters.sortDirection === 'ASC') {
+      setFilters(prev => ({...prev, orderBy : orderBy, sortDirection: 'DESC'}))
+      return
+    }
+    if(filters.orderBy && filters.sortDirection === 'DESC') {
+      setFilters(prev => ({...prev, orderBy: null, sortDirection: null}))
+      return
+    }
+    setFilters(prev => ({ ...prev, orderBy : orderBy, sortDirection:  'ASC'}))
+  }
+
   const filteredData = abnos?.filter((a:abno) => {
     if (text && !a.name.toLowerCase().includes(text.toLowerCase()) && !a.code.toLowerCase().includes(text.toLowerCase())) {
       return false
     }
 
-    if (filters.riskLevel !== null && filters.riskLevel.length > 0) {
-      if (!filters.riskLevel.includes(a.tier)) return false
+    if (filters.tier !== null && filters.tier.length > 0) {
+      if (!filters.tier.includes(a.tier)) return false
     }
 
     if (filters.workDamage !== null && filters.workDamage.length > 0) {
@@ -72,9 +89,23 @@ function App() {
     if(typeof a.hp === 'number' && (filters.hp < a.hp)){
       return false
     }
-
     return true
-  })
+  }).sort((a: abno, b:abno) => {
+    const key = filters.orderBy
+    const order = filters.sortDirection
+
+    if (!key || !order) return 0;
+
+    const valA = a[key as keyof abno]
+    const valB = b[key as keyof abno]
+
+    if (typeof valA === 'string' && typeof valB === 'string') {
+      return order === 'ASC' ? valA.localeCompare(valB) : valB.localeCompare(valA)
+    }
+    if (typeof valA === 'number' && typeof valB === 'number') {
+      return order === 'ASC' ? valA-valB : valB-valA
+    }
+  });
 
 
   const handleInput = (text: string) => {
@@ -107,20 +138,20 @@ function App() {
             <div style={{ display:'flex', flexDirection: 'column', borderTop: '2px #fffea1 solid', gap: '16px', padding: '12px'}}>
               <div style={{ display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
                 <p className='text' style={{ alignSelf: 'flex-start', textAlign: 'left'}}>Risk Level: </p>
-                {riskLevel.map(x => 
-                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
+                {tier.map(x => 
+                  <FilterButton label={x} isSelected={filters?.tier === x} onClick={() => toggleFilter('tier', x)}/>
                 )}
               </div>
               <div style={{display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
                 <p  style={{color: '#fffea1'}}>Work Damage: </p>
                 {workTypes.map(x=> 
-                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
+                  <FilterButton label={x} isSelected={filters?.workDamage === x} onClick={() => toggleFilter('workDamage', x)}/>
                 )}
               </div>
               <div style={{display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap'}}>
                 <p style={{color: '#fffea1'}}>Code: </p>
                 {code.map(x=> 
-                  <FilterButton label={x} isSelected={filters?.riskLevel === x} onClick={() => toggleFilter('riskLevel', x)}/>
+                  <FilterButton label={x} isSelected={filters?.code === x} onClick={() => toggleFilter('code', x)}/>
                 )}
               </div>
               <div style={{display: 'flex', flexDirection: 'row', gap: '36px'}}>
@@ -136,13 +167,25 @@ function App() {
       <table>
         <thead>
           <tr>
-            <th scope="col">Code</th>
+            <th scope="col">Code button 
+              <SortButton isSelected={filters.orderBy ==="code"} sortDirection={filters.sortDirection} onClick={() => toggleSort("code")}/>
+            </th>
             <th scope="col">Portrait</th>
-            <th scope="col">Name</th>
-            <th scope="col">Risk Level</th>
-            <th scope="col">HP</th>
-            <th scope="col">Qliphoth Counter</th>
-            <th scope="col">Damage Type</th>
+            <th scope="col">Name 
+              <SortButton isSelected={filters.orderBy === "name"} sortDirection={filters.sortDirection} onClick={() => toggleSort("name")}/>
+            </th>
+            <th scope="col">Risk Level 
+              <SortButton isSelected={filters.orderBy === "tier"} sortDirection={filters.sortDirection} onClick={() => toggleSort("tier")}/>
+            </th>
+            <th scope="col">HP 
+              <SortButton isSelected={filters.orderBy === "hp"} sortDirection={filters.sortDirection} onClick={() => toggleSort("hp")}/>
+            </th>
+            <th scope="col">Qliphoth Counter 
+              <SortButton isSelected={filters.orderBy === "qlipoth"}sortDirection={filters.sortDirection} onClick={() => toggleSort("qlipoth")}/>
+            </th>
+            <th scope="col">Damage Type 
+              <SortButton isSelected={filters.orderBy === "workDamage"} sortDirection={filters.sortDirection} onClick={() => toggleSort("workDamage")}/>
+            </th>
             <th scope="col">Resistances</th>
           </tr>
         </thead>
@@ -151,18 +194,13 @@ function App() {
           <tr key={u.id}>
             <td>{u.code}</td>
             <td>
-              <img 
-                src={`${url}/image/${u.portrait}.webp`} 
-                alt={u.portrait}   
-                height={156}
-              />
             </td>
             <td>{u.name}</td>
             <td>
               <img 
-                src={`/assets/Risk_${u.tier}.webp`} 
+                src={`/asset's/Risk_${u.tier}.webp`} 
                 width={48} 
-                onClick={() => toggleFilter("riskLevel", u.tier)} 
+                onClick={() => toggleFilter("tier", u.tier)} 
                 tabIndex={0}
                 onMouseEnter={() => setFocusedId(u.id)}
                 onMouseLeave={() => setFocusedId(null)}
@@ -170,7 +208,6 @@ function App() {
                   transition: 'transform 0.2s ease',
                   transform: focusedId === u.id ? 'scale(1.5)' : 'scale(1)',
                   position: 'relative',
-                  zIndex: focusedId === u.id ? 10 : 1,
                   cursor: 'pointer',
                 }}
               />
