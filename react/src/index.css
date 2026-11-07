@@ -180,4 +180,88 @@ p {
   margin: 0;
 }
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.017);
+}
 
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background: rgb(187, 186, 186);
+  padding: 24px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
+  height: 80%;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  flex-shrink: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.abno-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-areas:
+    "abno-info abno-management abno-escape-info"
+    "abno-info abno-management abno-gift"
+    "abno-info abno-preferences abno-ego";
+  height: 90%;
+  gap: 8px;
+  flex: 1;
+}
+
+.abno-info {
+  background: red;
+  grid-area: abno-info;
+}
+
+.abno-management {
+  background: blue;
+  grid-area: abno-management
+}
+
+.abno-preferences {
+  background: yellow;
+  grid-area: abno-preferences
+}
+
+.abno-escape-info {
+  background: green;
+  grid-area: abno-escape-info
+}
+
+.abno-gift {
+  background: orange;
+  grid-area: abno-gift
+}
+
+.abno-ego {
+  background: purple;
+  grid-area: abno-ego
+}

@@ -1,17 +1,16 @@
 export interface resist {
-  red: string | number
-  white: string | number
-  black: string | number 
-  pale: string | number
+  Red: string | number
+  White: string | number
+  Black: string | number
+  Pale: string | number
 }
 
 export interface abno {
-  id: number?;
   code: string;
   portrait: string;
   name: string;
   tier: string;
-  hp: number;
+  hp: number | string;
   resistances: resist;
   qlipoth: number
   workDamage: string

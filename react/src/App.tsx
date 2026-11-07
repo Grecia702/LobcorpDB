@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { useQuery} from '@tanstack/react-query';
 import './App.css'
-import type { abno } from '../../node/shared/types/types'
+import type { abno } from './types/abno'
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import { FilterButton } from './components/FilterButton';
 import { SortButton } from './components/SortButton';
+import abnos from './abno.json'
 
 interface Filters  {
   tier: string,
@@ -18,8 +18,7 @@ interface Filters  {
 }
 
 function App() {
-  const url = 'http://192.168.100.27:3000'
-  const [focusedId, setFocusedId] = useState<number | null>(null)
+  const [focusedId, setFocusedId] = useState<string | null>(null)
   const [text, setText] = useState<string>('')
   const [visible, setVisible] = useState(false)
   const [filters, setFilters] = useState<Filters>({
@@ -33,21 +32,10 @@ function App() {
     sortDirection: null
   })
 
-  const { data: abnos, isLoading, isError, error } = useQuery({
-    queryKey: ['abnos'],
-    queryFn: async () => {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('Erro ao buscar usuários');
-      return res.json();
-    },
-  });
-  
+
   const tier = ["Zayin","Teth","He", "Waw","Aleph",]
   const workTypes = ["Red", "White", "Black", "Pale"]
   const code = ["Original", "Fairy Tale", "Trauma", "Donator"]
-
-  if (isLoading) return <p>Carregando...</p>;
-  if (isError) return <p>Erro: {error.message}</p>;
 
   const toggleFilter = <K extends keyof Filters>(key: K, value: Filters[K])=> {
     if(filters[key] === value) {
@@ -105,6 +93,7 @@ function App() {
     if (typeof valA === 'number' && typeof valB === 'number') {
       return order === 'ASC' ? valA-valB : valB-valA
     }
+    return 0
   });
 
 
@@ -191,22 +180,27 @@ function App() {
         </thead>
         <tbody>
           {filteredData?.map((u : abno) => 
-          <tr key={u.id}>
+          <tr key={u.code}>
             <td>{u.code}</td>
             <td>
+              <img 
+                src={`/abnos/${u.portrait}.webp`} 
+                alt={u.portrait}   
+                height={156}
+              />
             </td>
             <td>{u.name}</td>
             <td>
               <img 
-                src={`/asset's/Risk_${u.tier}.webp`} 
+                src={`/assets/Risk_${u.tier}.webp`} 
                 width={48} 
                 onClick={() => toggleFilter("tier", u.tier)} 
                 tabIndex={0}
-                onMouseEnter={() => setFocusedId(u.id)}
+                onMouseEnter={() => setFocusedId(u.code)}
                 onMouseLeave={() => setFocusedId(null)}
                 style={{
                   transition: 'transform 0.2s ease',
-                  transform: focusedId === u.id ? 'scale(1.5)' : 'scale(1)',
+                  transform: focusedId === u.code ? 'scale(1.5)' : 'scale(1)',
                   position: 'relative',
                   cursor: 'pointer',
                 }}
