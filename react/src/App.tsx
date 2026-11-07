@@ -184,7 +184,7 @@ function App() {
             <td>{u.code}</td>
             <td>
               <img 
-                src={`/abnos/${u.portrait}.webp`} 
+                src={`${import.meta.env.BASE_URL}abnos/${u.portrait}.webp`} 
                 alt={u.portrait}   
                 height={156}
               />
@@ -192,7 +192,7 @@ function App() {
             <td>{u.name}</td>
             <td>
               <img 
-                src={`/assets/Risk_${u.tier}.webp`} 
+                src={`${import.meta.env.BASE_URL}assets/Risk_${u.tier}.webp`} 
                 width={48} 
                 onClick={() => toggleFilter("tier", u.tier)} 
                 tabIndex={0}
@@ -209,19 +209,19 @@ function App() {
             <td>{u.hp}</td>
             <td>
               <div style={{display: 'flex', gap: '12px', justifyContent: 'center'}}>
-                <img src={'/assets/32px-QliphothCounterIcon.png'}></img>
+                <img src={`${import.meta.env.BASE_URL}assets/32px-QliphothCounterIcon.png`}></img>
                 {u.qlipoth > 0 ? u.qlipoth : 'X'}
               </div>
             </td>
             <td>
-              <img src={`/assets/${u.workDamage}DamageTypeIcon.webp`} width={64} alt="" />
+              <img src={`${import.meta.env.BASE_URL}assets/${u.workDamage}DamageTypeIcon.webp`} width={64} alt="" />
             </td>
             <td style={{padding:'12px'}}>
               <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px'}}>
                 {Object.entries((u.resistances)).map(([key, value]) => 
                   <div key={key} style={{display: 'flex', flexDirection: 'column', alignContent: 'center', alignItems: 'center'}}>
                     <span>({typeof value === 'number' ? value.toFixed(1) : value})</span>
-                    <img src={`/assets/${key}DamageTypeIcon.webp`} height={32} width={32}></img>
+                    <img src={`${import.meta.env.BASE_URL}assets/${key}DamageTypeIcon.webp`} height={32} width={32}></img>
                   </div>
                 )}
               </div>
