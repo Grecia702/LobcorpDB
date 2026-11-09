@@ -254,21 +254,6 @@
     "qlipoth": 3,
     "workDamage": "Black"
   },
-{
-    "code": "O-01-83",
-    "portrait": "knightofdespair",
-    "name": "Knight Of Despair",
-    "tier": "Waw",
-    "hp": "X",
-    "resistances": {
-      "Red": 1.2,
-      "White": 1,
-      "Black": 0.8,
-      "Pale": 0.5
-    },
-    "qlipoth": 0,
-    "workDamage": "White"
-  },
   {
     "code": "T-06-27",
     "portrait": "176mhz",
