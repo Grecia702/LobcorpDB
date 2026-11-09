@@ -284,21 +284,6 @@
     "qlipoth": 5,
     "workDamage": "White"
   },
-  {
-    "code": "F-01-69",
-    "portrait": "derfreischutz",
-    "name": "Der Freischutz",
-    "tier": "He",
-    "hp": "X",
-    "resistances": {
-      "Red": "Unspecified",
-      "White": "Unspecified",
-      "Black": "Unspecified",
-      "Pale": "Unspecified"
-    },
-    "qlipoth": 3,
-    "workDamage": "Black"
-  },
     {
     "code": "T-05-41",
     "portrait": "allaroundhelper",
@@ -567,21 +552,6 @@
       "Pale": 0.5
     },
     "qlipoth": 2,
-    "workDamage": "Black"
-  },
-    {
-    "code": "D-03-109",
-    "portrait": "meltinglove",
-    "name": "Melting Love",
-    "tier": "Aleph",
-    "hp": 1500,
-    "resistances": {
-      "Red": -1,
-      "White": 1,
-      "Black": 1.5,
-      "Pale": 0.8
-    },
-    "qlipoth": 3,
     "workDamage": "Black"
   },
     {
