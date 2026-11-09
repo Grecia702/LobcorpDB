@@ -179,8 +179,8 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {filteredData?.map((u : abno) => 
-          <tr key={u.code}>
+          {filteredData?.map((u : abno, index) => 
+          <tr key={`${u.code}-${index}`}>
             <td>{u.code}</td>
             <td>
               <img 
